@@ -31,7 +31,7 @@ const Container = styled.div<ContainerProps>`
   text-align: ${({ inline = false }) => (inline ? "center" : "left")};
 
   @media screen and (max-width: 1024px) {
-    padding: 20px;
+    padding: 30px;
   }
 
   @media screen and (max-width: 768px) {

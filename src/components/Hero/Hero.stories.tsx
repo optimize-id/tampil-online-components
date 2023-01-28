@@ -1,10 +1,24 @@
 import styled from "@emotion/styled";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import Button from "../Button";
 
 import Hero from "./Hero";
 
 const Container = styled.div`
-  min-width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+
+const ChildrenContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+`;
+
+const ButtonGroup = styled.div`
+  display: inline-flex;
+  gap: 12px;
+  justify-content: center;
 `;
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -14,40 +28,51 @@ export default {
 } as ComponentMeta<typeof Hero>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Hero> = (args) => (
+const PrimaryTemplate: ComponentStory<typeof Hero> = (args) => (
   <Container>
-    <Hero {...args} />
+    <Hero {...args}>
+      <div>
+        This is placeholder text for explaining to user about your company or
+        your services. This is placeholder text for explaining to user about
+        your company or your services. This is placeholder text for explaining
+        to user about your company or your services. This is placeholder text
+        for explaining to user about your company or your services.
+      </div>
+    </Hero>
   </Container>
 );
 
-export const Primary = Template.bind({});
+export const Primary = PrimaryTemplate.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  children: (
-    <div>
-      This is placeholder text for explaining to user about your company or your
-      services. This is placeholder text for explaining to user about your
-      company or your services. This is placeholder text for explaining to user
-      about your company or your services. This is placeholder text for
-      explaining to user about your company or your services.
-    </div>
-  ),
   title: "Lorem Ipsum Dolor Sit Amet, Eam Quas",
   image: "https://picsum.photos/580/480",
 };
 
-export const Inline = Template.bind({});
+const InlineTemplate: ComponentStory<typeof Hero> = (args) => (
+  <Container>
+    <Hero {...args}>
+      <ChildrenContainer>
+        <div>
+          This is placeholder text for explaining to user about your company or
+          your services. This is placeholder text for explaining to user about
+          your company or your services. This is placeholder text for explaining
+          to user about your company or your services. This is placeholder text
+          for explaining to user about your company or your services.
+        </div>
+
+        <ButtonGroup>
+          <Button variant="outline">Button</Button>
+          <Button>Button</Button>
+        </ButtonGroup>
+      </ChildrenContainer>
+    </Hero>
+  </Container>
+);
+
+export const Inline = InlineTemplate.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Inline.args = {
-  children: (
-    <div>
-      This is placeholder text for explaining to user about your company or your
-      services. This is placeholder text for explaining to user about your
-      company or your services. This is placeholder text for explaining to user
-      about your company or your services. This is placeholder text for
-      explaining to user about your company or your services.
-    </div>
-  ),
   title: "Lorem Ipsum Dolor Sit Amet, Eam Quas",
   image: "https://picsum.photos/580/480",
   inline: true,
