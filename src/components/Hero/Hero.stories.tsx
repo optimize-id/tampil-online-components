@@ -35,3 +35,20 @@ Primary.args = {
   title: "Lorem Ipsum Dolor Sit Amet, Eam Quas",
   image: "https://picsum.photos/580/480",
 };
+
+export const Inline = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+Inline.args = {
+  children: (
+    <div>
+      This is placeholder text for explaining to user about your company or your
+      services. This is placeholder text for explaining to user about your
+      company or your services. This is placeholder text for explaining to user
+      about your company or your services. This is placeholder text for
+      explaining to user about your company or your services.
+    </div>
+  ),
+  title: "Lorem Ipsum Dolor Sit Amet, Eam Quas",
+  image: "https://picsum.photos/580/480",
+  inline: true,
+};
