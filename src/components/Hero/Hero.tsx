@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
 import { ReactNode } from "react";
+import Title from "../Title";
 
 interface HeroProps {
-  title: string;
+  title?: string;
   image?: string;
   children: ReactNode;
   reverse?: boolean;
@@ -62,19 +63,6 @@ const DescriptionContainer = styled.div`
   gap: 24px;
 `;
 
-const Title = styled.h4`
-  font-size: 3.2rem;
-  color: #373f41;
-  font-weight: 700;
-  line-height: 4rem;
-  margin: 0;
-
-  @media screen and (max-width: 1024px) {
-    font-size: 2.2rem;
-    line-height: 3rem;
-  }
-`;
-
 const Hero = (props: HeroProps) => {
   const { title, image, children, reverse = false, inline = false } = props;
 
@@ -82,8 +70,8 @@ const Hero = (props: HeroProps) => {
     <Container reverse={reverse} inline={inline}>
       <FlexItem>
         <DescriptionContainer>
-          <Title>{title}</Title>
-          <Description>{children}</Description>
+          {!!title && <Title>{title}</Title>}
+          {!!children && <Description>{children}</Description>}
         </DescriptionContainer>
       </FlexItem>
       {!!image ? (
