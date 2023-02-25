@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Hero",
+    "label": "Hero",
+    "props": {
+      "title": {
+        "required": false,
+        "type": "string",
+        "label": "Title"
+      },
+      "image": {
+        "required": false,
+        "type": "string",
+        "label": "Image"
+      },
+      "children": {
+        "required": true,
+        "type": "droppable",
+        "defaultValue": ""
+      },
+      "reverse": {
+        "required": false,
+        "type": "boolean",
+        "label": "Reverse?"
+      },
+      "inline": {
+        "required": false,
+        "type": "boolean",
+        "label": "Inline?"
+      }
+    }
+  },
+  {
+    "name": "Title",
+    "label": "Title",
+    "props": {
+      "children": {
+        "required": true,
+        "type": "string",
+        "label": "Text",
+        "defaultValue": "Your Title"
+      }
+    }
+  },
+  {
+    "name": "Section",
+    "label": "Section",
+    "props": {
+      "title": {
+        "required": true,
+        "type": "string",
+        "label": "Title",
+        "defaultValue": "Your Section"
+      },
+      "children": {
+        "required": false,
+        "type": "droppable",
+        "defaultValue": ""
+      }
+    }
+  },
+  {
+    "name": "Profile",
+    "label": "Profile",
+    "props": {
+      "title": {
+        "required": true,
+        "type": "string",
+        "label": "Title",
+        "defaultValue": "Frontend Engineer"
+      },
+      "name": {
+        "required": true,
+        "type": "string",
+        "label": "Name",
+        "defaultValue": "Noval Bintang"
+      },
+      "picture": {
+        "required": true,
+        "type": "string",
+        "label": "Picture",
+        "defaultValue": "https://ik.imagekit.io/mnovalbs/noval-photo_2mIPgYeYA.png"
+      }
+    }
+  },
+  {
+    "name": "ActivityCard",
+    "label": "Activity Card",
+    "props": {
+      "title": {
+        "required": true,
+        "type": "string",
+        "label": "Activity",
+        "defaultValue": "My Activity"
+      },
+      "subTitle": {
+        "required": true,
+        "type": "string",
+        "label": "Short Information",
+        "defaultValue": ""
+      },
+      "text": {
+        "required": true,
+        "type": "string",
+        "label": "Detail",
+        "defaultValue": "<ul>\n<li>Replace this text with your activity on this company</li>\n<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis gravida egestas.</li>\n<li>Vestibulum pulvinar risus a tincidunt ornare. Aliquam erat volutpat.</li>\n<li>Vestibulum augue arcu, ornare quis diam a, placerat varius nunc.</li>\n<li>Mauris purus sapien, blandit euismod erat rutrum, malesuada egestas enim.</li>\n<li>Curabitur nulla tortor, sagittis efficitur dolor id, gravida ornare dolor.</li>\n</ul>"
+      },
+      "image": {
+        "required": true,
+        "type": "string",
+        "label": "Image",
+        "defaultValue": "https://ik.imagekit.io/mnovalbs/logo-gojek_yYpoSBkfC.png"
+      }
+    }
+  }
+]

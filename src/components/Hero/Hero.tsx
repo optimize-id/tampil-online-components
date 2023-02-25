@@ -23,6 +23,7 @@ const containerFlexDirection = (reverse: boolean, inline: boolean) => {
 };
 
 const Container = styled.div<ContainerProps>`
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 32px;
