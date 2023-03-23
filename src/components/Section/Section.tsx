@@ -24,6 +24,8 @@ const SectionTitle = styled.div`
   h3 {
     margin-top: 0;
     text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.17em;
   }
 `;
 

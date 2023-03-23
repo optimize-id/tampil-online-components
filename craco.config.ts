@@ -18,6 +18,7 @@ const config = {
             "./Section": "./src/components/Section",
             "./Profile": "./src/components/Profile",
             "./ActivityCard": "./src/components/ActivityCard",
+            "./Text": "./src/components/Text",
           },
           shared: {
             ...dependencies,

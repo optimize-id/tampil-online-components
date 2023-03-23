@@ -12,6 +12,8 @@ const ProfileWrapper = styled.div`
 const PhotoWrapper = styled.div`
   width: 150px;
   height: 150px;
+  max-width: 150px;
+  max-height: 150px;
   border-radius: 100%;
   overflow: hidden;
 `;
@@ -26,6 +28,9 @@ const Name = styled.h1`
   color: #333;
   margin-bottom: 0;
   line-height: 2.6rem;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: 0.67em;
 `;
 
 const Title = styled.h2`

@@ -1,50 +1,8 @@
 [
   {
-    "name": "Hero",
-    "label": "Hero",
-    "props": {
-      "title": {
-        "required": false,
-        "type": "string",
-        "label": "Title"
-      },
-      "image": {
-        "required": false,
-        "type": "string",
-        "label": "Image"
-      },
-      "children": {
-        "required": true,
-        "type": "droppable",
-        "defaultValue": ""
-      },
-      "reverse": {
-        "required": false,
-        "type": "boolean",
-        "label": "Reverse?"
-      },
-      "inline": {
-        "required": false,
-        "type": "boolean",
-        "label": "Inline?"
-      }
-    }
-  },
-  {
-    "name": "Title",
-    "label": "Title",
-    "props": {
-      "children": {
-        "required": true,
-        "type": "string",
-        "label": "Text",
-        "defaultValue": "Your Title"
-      }
-    }
-  },
-  {
     "name": "Section",
     "label": "Section",
+    "image": "https://storage.googleapis.com/filos-templates/poc-images/widget_section.jpg",
     "props": {
       "title": {
         "required": true,
@@ -60,14 +18,28 @@
     }
   },
   {
-    "name": "Profile",
-    "label": "Profile",
+    "name": "Text",
+    "label": "Text",
     "props": {
-      "title": {
+      "text": {
         "required": true,
         "type": "string",
-        "label": "Title",
-        "defaultValue": "Frontend Engineer"
+        "widget": "wysiwyg",
+        "label": "Text"
+      }
+    }
+  },
+  {
+    "name": "Profile",
+    "label": "Profile",
+    "image": "https://storage.googleapis.com/filos-templates/poc-images/widget_profile.jpg",
+    "props": {
+      "picture": {
+        "required": true,
+        "aspect": 1,
+        "type": "image",
+        "label": "Picture",
+        "defaultValue": "https://ik.imagekit.io/mnovalbs/noval-photo_2mIPgYeYA.png"
       },
       "name": {
         "required": true,
@@ -75,18 +47,25 @@
         "label": "Name",
         "defaultValue": "Noval Bintang"
       },
-      "picture": {
+      "title": {
         "required": true,
         "type": "string",
-        "label": "Picture",
-        "defaultValue": "https://ik.imagekit.io/mnovalbs/noval-photo_2mIPgYeYA.png"
+        "label": "Title",
+        "defaultValue": "Frontend Engineer"
       }
     }
   },
   {
     "name": "ActivityCard",
-    "label": "Activity Card",
+    "label": "Activity List",
+    "image": "https://storage.googleapis.com/filos-templates/poc-images/widget_activity.jpg",
     "props": {
+      "image": {
+        "required": true,
+        "type": "image",
+        "label": "Image",
+        "defaultValue": "https://ik.imagekit.io/mnovalbs/logo-gojek_yYpoSBkfC.png"
+      },
       "title": {
         "required": true,
         "type": "string",
@@ -97,19 +76,14 @@
         "required": true,
         "type": "string",
         "label": "Short Information",
-        "defaultValue": ""
+        "defaultValue": "Activity short information, Jan 2023 - Present"
       },
       "text": {
         "required": true,
         "type": "string",
+        "widget": "wysiwyg",
         "label": "Detail",
         "defaultValue": "<ul>\n<li>Replace this text with your activity on this company</li>\n<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis gravida egestas.</li>\n<li>Vestibulum pulvinar risus a tincidunt ornare. Aliquam erat volutpat.</li>\n<li>Vestibulum augue arcu, ornare quis diam a, placerat varius nunc.</li>\n<li>Mauris purus sapien, blandit euismod erat rutrum, malesuada egestas enim.</li>\n<li>Curabitur nulla tortor, sagittis efficitur dolor id, gravida ornare dolor.</li>\n</ul>"
-      },
-      "image": {
-        "required": true,
-        "type": "string",
-        "label": "Image",
-        "defaultValue": "https://ik.imagekit.io/mnovalbs/logo-gojek_yYpoSBkfC.png"
       }
     }
   }
